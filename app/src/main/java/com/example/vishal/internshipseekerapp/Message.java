@@ -18,7 +18,7 @@ import io.hasura.sdk.responseListener.LogoutResponseListener;
 import static com.example.vishal.internshipseekerapp.MainActivity.client;
 import static com.example.vishal.internshipseekerapp.MainActivity.user;
 
-public class ReplyMessage extends AppCompatActivity {
+public class Message extends AppCompatActivity {
 
     String[] messageDetails;
     EditText receiverUsername;
@@ -31,7 +31,7 @@ public class ReplyMessage extends AppCompatActivity {
 
         Bundle messageData = getIntent().getExtras();
         if (messageData == null) {
-            // go to parent activity
+            // go to calling activity
             finish();
         }
 
@@ -54,12 +54,19 @@ public class ReplyMessage extends AppCompatActivity {
         });
     }
 
+    @Override
+    public boolean onSupportNavigateUp(){
+        //code it to launch an intent to the activity you want
+        finish();
+        return true;
+    }
+
     private void sendMessage() {
         String role = messageDetails[4];
         String subject = this.subject.getText().toString();
         String body = this.body.getText().toString();
         Integer receiverId = Integer.parseInt(messageDetails[5]);
-        String receiver = messageDetails[1];
+        String receiver = this.receiverUsername.getText().toString();
 
         /*String senderRole,String messageSubject, String messageBody, String sender,
                             Integer senderId, String receiver, Integer receiverId*/

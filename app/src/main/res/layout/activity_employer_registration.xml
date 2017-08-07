@@ -1,9 +1,361 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.vishal.internshipseekerapp.EmployerRegistration">
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.vishal.internshipseekerapp.LoginActivity"
+    android:weightSum="1"
+    android:background="@color/backgroundColor"
+    tools:layout_editor_absoluteY="8dp"
+    tools:layout_editor_absoluteX="8dp">
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/sign_up_with_google"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/google_sign_up"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <View android:background="#ffffff"
+        android:layout_width = "match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="16dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/sign_up_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_email"
+                android:textSize="@dimen/signup_text_small"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/sign_up_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:textSize="@dimen/signup_text_small"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+            <EditText
+                android:id="@+id/sign_up_usernamename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/choose_username"
+                android:textSize="@dimen/signup_text_small"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+            <EditText
+                android:id="@+id/sign_up_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:textSize="@dimen/signup_text_small"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+            <EditText
+                android:id="@+id/sign_up_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/confirm_password"
+                android:textSize="@dimen/signup_text_small"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:singleLine="true"/>
+
+            <EditText
+                android:id="@+id/sign_up_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/company"
+                android:textSize="@dimen/signup_text_small"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:singleLine="true"/>
+
+
+
+            <EditText
+                android:id="@+id/sign_up_designation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/designation"
+                android:textSize="@dimen/signup_text_small"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:maxLines="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:singleLine="true"/>
+
+
+            <Button
+                android:id="@+id/signup_dob_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dob"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                />
+
+            <EditText
+                android:id="@+id/signup_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/signup_text_small"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:enabled="false"
+                android:singleLine="true"/>
+
+
+
+            <TextView
+                android:id="@+id/signup_gender_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/gender_select"
+                android:textSize="@dimen/heading_size"
+                android:textColor="@color/black"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+            <RadioGroup
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/select_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_medium"
+                    android:text="@string/gender_male"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/select_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender_female"
+                    android:textSize="@dimen/text_medium"
+                    android:layout_marginStart="30dp"
+                    />
+
+            </RadioGroup>
+
+
+
+            <TextView
+                android:id="@+id/select_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/field_select"
+                android:textSize="@dimen/heading_size"
+                android:textColor="@color/black"
+                />
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/field_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:id="@+id/field0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_medium"
+
+                    android:text="@string/field0" />
+
+                <CheckBox
+                    android:id="@+id/field1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_medium"
+                    android:text="@string/field1" />
+
+                <CheckBox
+                    android:id="@+id/field2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_medium"
+
+                    android:text="@string/field2" />
+
+                <CheckBox
+                    android:id="@+id/field3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_medium"
+                    android:text="@string/field3" />
+
+                <CheckBox
+                    android:id="@+id/field4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_medium"
+
+                    android:text="@string/field4" />
+
+                <CheckBox
+                    android:id="@+id/field5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_medium"
+
+                    android:text="@string/field5" />
+
+                <CheckBox
+                    android:id="@+id/field6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_medium"
+                    android:text="@string/field6" />
+
+                <CheckBox
+                    android:id="@+id/field7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_medium"
+                    android:text="@string/field7" />
+
+                <CheckBox
+                    android:id="@+id/field8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_medium"
+                    android:text="@string/field8" />
+
+                <CheckBox
+                    android:id="@+id/field9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_medium"
+                    android:text="@string/field9" />
+
+                <CheckBox
+                    android:id="@+id/field10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_medium"
+                    android:text="@string/field10" />
+
+                <CheckBox
+                    android:id="@+id/field11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_medium"
+                    android:text="@string/field11" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/skill_list"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="30dp"
+                android:focusableInTouchMode="true">
+
+                <!--relevant skills displayed here-->
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/login_progress"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                />
+
+            <Button
+                android:id="@+id/field_select_done"
+                style="?android:textAppearanceSmall"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/done"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:visibility="visible"
+                />
+
+            <Button
+                android:id="@+id/sign_up"
+                style="?android:textAppearanceSmall"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/signup"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>
+
+
+

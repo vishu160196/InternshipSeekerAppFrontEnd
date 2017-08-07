@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.vishal.internshipseekerapp.DisplaySkills">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/lateral_margin"
+        android:layout_marginRight="@dimen/lateral_margin"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/profile_text_large"
+        android:id="@+id/heading_skills"/>
 
-</android.support.constraint.ConstraintLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lateral_margin"
+        android:layout_marginLeft="@dimen/lateral_margin"
+        android:layout_marginRight="@dimen/lateral_margin"
+        android:id="@+id/skills">
+
+    </ListView>
+
+</LinearLayout>
