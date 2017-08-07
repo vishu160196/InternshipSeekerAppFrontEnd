@@ -14,9 +14,6 @@ android {
     signingConfigs {
         debug {
             storeFile file('keyStore/internshipseekerkeystore.jks')
-            keyAlias 'key0'
-            keyPassword 'w@nn@Cry'
-            storePassword 'Y@nkeeD00dle'
         }
     }
     buildTypes {
